@@ -62,8 +62,6 @@ $resultado = $numComputador + $numUser;
     }
     ?>
 
-    <h1></h1>
-
 </body>
 
 </html>
