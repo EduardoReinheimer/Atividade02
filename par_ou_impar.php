@@ -37,7 +37,7 @@ $resultado = $numComputador + $numUser;
         <input type="submit" value="Jogar">
     </form>
     <?php
-    $radioModo = $_POST["modo"];
+    $radioModo = isset($_POST["modo"]) ? $_POST["modo"] : "par";
     $isPar;
     if ($radioModo == "par") {
         $isPar = true;

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-$opcaoUser = $_POST["opcao"];
+$opcaoUser = isset($_POST["opcao"]) ? $_POST["opcao"] : 1;
 $opcaoComputador = rand(1, 3);
 ?>
 <html lang="en">
@@ -20,7 +20,7 @@ $opcaoComputador = rand(1, 3);
         <br>
         <ul>
             <li>
-                <input type="radio" name="opcao" value="1">
+                <input type="radio" name="opcao" value="1" checked>
                 <label for="1">Pedra</label>
             </li>
             <li>
@@ -52,11 +52,11 @@ $opcaoComputador = rand(1, 3);
             $message = $opcaoComputador  == 3 ?
                 "Vitória do usuário" :
                 "Vitória do Computador";
-        } else if ($opcaoUser == 2){
+        } else if ($opcaoUser == 2) {
             $message = $opcaoComputador  == 1 ?
                 "Vitória do usuário" :
                 "Vitória do Computador";
-        } else if ($opcaoUser == 3){
+        } else if ($opcaoUser == 3) {
             $message = $opcaoComputador  == 2 ?
                 "Vitória do usuário" :
                 "Vitória do Computador";
