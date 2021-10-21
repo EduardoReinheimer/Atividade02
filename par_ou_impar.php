@@ -3,6 +3,17 @@
 $numUser = isset($_POST["numUser"]) ? $_POST["numUser"] : 0;
 $numComputador = rand(0, 10);
 $resultado = $numComputador + $numUser;
+
+function displayHands($num)
+{
+    if ($num > 5) {
+        echo "<img src='img/hands/5.png'>";
+        $num -= 5;
+        echo "<img src='img/hands/$num.png'>";
+    } else {
+        echo "<img src='img/hands/$num.png'>";
+    }
+}
 ?>
 <html lang="en">
 
@@ -53,8 +64,9 @@ $resultado = $numComputador + $numUser;
     }
 
     echo "<h1>Número Usuário: $numUser</h1>";
+    displayHands($numUser);
     echo "<h1>Número Computador: $numComputador</h1>";
-
+    displayHands($numComputador);
     if ($victory) {
         echo "<h1>Vitória</h1>";
     } else {
